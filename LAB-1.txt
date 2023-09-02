@@ -1,0 +1,264 @@
+///*
+// * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+// */
+//
+//package com.mycompany.firstproject;
+//
+///**
+// *
+// * @author majeb
+// */
+////import static java.time.Clock.system;
+//import java.util.Scanner;
+//public class FirstProject
+//{
+//
+//    public static void main(String[] args)
+//    {
+//        int num1 , num2 , num3 ;
+//        int max , min;
+//        
+//        Scanner input = new Scanner (System.in);
+//        System.out.print("please enter the first number\n");
+//        num1=input.nextInt();
+//        
+//         System.out.print("please enter the seccond number\n");
+//        num2=input.nextInt();
+//        
+//        
+//         System.out.print("please enter the third number\n");
+//        num3=input.nextInt();
+//        
+//     max=0;
+//     min=0;
+//      if (num1>0 && num2>0 && num3 >0)
+//      {
+//      if (num1 > num2 && num1 >num3)
+//      max=num1;
+//      
+//      else if (num2 > num1&& num2 >num3)
+//       max=num2;
+//      
+//      else if  (num3 > num1&& num3 >num3)
+//      max=num3;
+//      
+//      
+//      
+//      //here we figure out the minumum
+//     if (num1 < num2 && num1 <num3)
+//      {min=num1;}
+//      
+//      else if (num2 < num1&& num2 <num3)
+//      { min=num2;}
+//      
+//      else 
+//      { min=num3;}
+//      }
+//      else
+//            System.out.println("one of the inout are less than zero , please try aging , and the the value of max and min as what i am intialized");
+//      
+//        System.out.println("the max number is >> " + max);
+//        System.out.println("the min number is >> " + min);
+//      
+//     
+//
+//        
+//    }
+//}
+
+
+//
+//
+///*
+//* Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+//*/
+//
+//package com.mycompany.firstproject;
+//
+///**
+//*
+//* @author majeb
+//*/
+//
+//import java.util.Scanner;
+//public class FirstProject
+//{
+//
+//    public static void main(String[] args)
+//    {
+//        int numbeOfmonth ;
+//        
+//        
+//        Scanner input = new Scanner (System.in);
+//        System.out.print("please enter the number of month\n");
+//        numbeOfmonth=input.nextInt();
+//        
+//        
+//     
+//    if (numbeOfmonth<=12)
+//    {
+//        switch (numbeOfmonth)
+//        {
+//            case 1 -> System.out.println("its saturdat");
+//            
+//            case 2 -> System.out.println("its monday");
+//            
+//            
+//            
+//            case 3 -> System.out.println("its tuesday");
+//            
+//            
+//            
+//            case 4 -> System.out.println("its wedensday");
+//            
+//            
+//            
+//            case 5 -> System.out.println("its thursday");
+//            
+//            
+//            
+//            case 6 -> System.out.println("its friday");
+//            
+//            default -> System.out.println("its sunday");
+//          
+//        }
+//        
+//        }
+//     
+//    
+//
+//     
+//        else
+//        System.out.println("you sign in wrong number");
+//    }
+//    
+//}
+//
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.firstproject;
+
+/**
+ *
+ * @author majeb
+ */
+//import static java.time.Clock.system;
+import java.util.Scanner;
+public class FirstProject
+{
+
+    public static void main(String[] args)
+    {
+        String s1 , s2 , s3; 
+        
+        
+        Scanner input = new Scanner (System.in);
+        System.out.print("please enter the first name: ");
+        s1=input.next();
+        System.out.print("please enter the second name: ");
+        s2=input.next();
+        System.out.print("please enter the third name: ");
+        s3=input.next();
+        
+        
+       
+        
+   
+        System.out.println("the name are ->> " + s1 +s2 +s3);
+        
+        if (s1.length() > s2.length() && s1.length() > s3.length())
+            System.out.println("the longest name is " + s1);
+        
+        
+         else if (s2.length() > s1.length() && s2.length() > s3.length())
+            System.out.println("the longest name  is second name  " + s2 +"and the length of it is >> " + s2.length());
+         
+        else
+             System.out.println("the longest name is third name  " + "and the length of the longest is " + s3.length());
+     
+         
+     
+     
+
+      }
+
+    
+}
+
+
+
+//
+///*
+// * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+// */
+//
+//package com.mycompany.firstproject;
+//
+///**
+// *
+// * @author majeb
+// */
+////import static java.time.Clock.system;
+//import java.util.Scanner;
+//public class FirstProject
+//{
+//
+//    public static void main(String[] args)
+//    {
+//        int age;
+//       
+//        
+//        
+//        Scanner input = new Scanner (System.in);
+//        System.out.print("please enter age ");
+//        age=input.nextInt();
+//        
+//       
+//        
+//   
+//        System.out.println("the age is ->> " + age);
+//     
+//     
+//
+//      }
+//
+//    
+//}
+//
+
+//
+///*
+// * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+// */
+//
+//package com.mycompany.firstproject;
+//
+///**
+// *
+// * @author majeb
+// */
+////import static java.time.Clock.system;
+//import java.util.Scanner;
+//public class FirstProject
+//{
+//
+//    public static void main(String[] args)
+//    {
+//        double deggreInfehr , transfareTocel=0;
+//        Scanner input = new Scanner (System.in);
+//        System.out.println("enter the deggre >>>");
+//        deggreInfehr = input.nextDouble();
+//        
+//        transfareTocel= (5.0/9.0) * (deggreInfehr-32);
+//        System.out.println("the degree at cel is>>" +transfareTocel);
+//        
+//      }
+//
+//    
+//}
+//
+
+

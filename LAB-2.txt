@@ -1,0 +1,178 @@
+//task1
+//package com.mycompany.firstproject;
+//
+//
+//import java.util.Scanner;
+//public class FirstProject
+//{
+//   public static void main(String[] args)
+//   {
+//       String nameOfstudent,Themaxname=" " , TheminName= " ";
+//       int score , ThemaximumScore=0 ,TheminumumScore=0 ;
+//       int numberOfstduent;
+//       Scanner input = new Scanner(System.in);
+//       System.out.println("please enter the number of student you watn to check about the high score ");
+//       numberOfstduent=input.nextInt();
+//                     
+//       
+//       for (int i=1 ; i<=numberOfstduent ; i++)
+//       {
+//            System.out.println("please enter the name of stuent " + i +  ":");
+//            nameOfstudent=input.next();
+//           System.out.println("and now please enter the score of student " + i + ":");         
+//           score=input.nextInt();
+//
+//
+//                if (score >ThemaximumScore ) //?at this point we check what student has
+//                {
+//                         ThemaximumScore=score;
+//                          Themaxname=nameOfstudent;
+//                              
+//                }
+//                 
+//		if (score< TheminumumScore)
+//		{
+//			TheminumumScore=score;
+//			TheminName=nameOfstudent;
+//		}
+//
+//
+//                    
+//         
+//       }
+//       
+//       System.out.println("the student :" +Themaxname + " and the score of him is :" + ThemaximumScore );
+//       
+//     
+//   }
+//       
+// }
+
+
+
+//task2
+package com.mycompany.firstproject;
+
+
+import java.util.Scanner;
+public class FirstProject
+{
+   public static void main(String[] args)
+   {
+       Scanner PersongInfo = new Scanner(System.in);
+//       String fn , mn , ln;
+//       int MidC;
+//       string  Firstc  , Lastc;
+//       String Password;
+//       int age;
+String firstName, middleName, lastName ;
+int age;
+//string Pasword;
+       System.out.println("Please enter the first name");
+       firstName=PersongInfo.next();
+       
+       System.out.println("Please enter the second name");
+       middleName=PersongInfo.next();
+       
+       
+       System.out.println("Please enter the last name");
+       lastName=PersongInfo.next();
+       
+       System.out.println("Please enter the age of persong ");
+       age=PersongInfo.nextInt();
+        
+//الكود الي هنا ماشتغل
+//      String  Firstc== fn.charAt(0);
+//      int Midc= mn.length()/2;
+//       String gainResult = to_string(Midc);
+//      String Lastc=ln.charAt(ln.length()-1);
+//       String Fisrtc;
+//       
+//       
+//       
+//       Pasword=Fisrtc+gainResult.substring(gainResult,gainResult+1) +Lastc+ (age*100);
+//       System.out.println("the pass is" + Pasword);
+
+
+
+
+            int midOfMidName=(middleName.length())/2;
+            String CreateAname;
+                   CreateAname = firstName.charAt(0) +
+               middleName.substring(midOfMidName,midOfMidName+1) +
+               lastName.charAt(lastName.length()-1);
+
+
+
+ String Pasword= CreateAname + (age*100);
+                 System.out.println("the pass is   :" + Pasword);
+
+       
+       
+       
+       
+    }
+
+    
+    }
+
+
+
+
+
+
+//task3//not solive yet
+       
+        
+
+
+
+
+
+
+
+
+//task4
+package com.mycompany.firstproject;
+
+
+import java.util.Scanner;
+
+public class firstproject 
+    {
+    
+public static void main(String[] args) 
+{
+  int CountWord = 1;
+String TheWord;
+Scanner input = new Scanner(System.in);
+System.out.print("Please enter the string to count the word of it!!! :");
+TheWord = input.nextLine();
+TheWord=TheWord.trim(); //لحذف المسافة من البداية والنهاية
+if (TheWord.length()==0) //?
+{
+    CountWord=0;
+    
+}
+
+    
+
+for (int i=0 ; i<TheWord.length();i++)
+{
+    if (TheWord.charAt(i)==' ')
+    {
+    CountWord++;
+    }
+}
+
+System.out.println("Number of words " + CountWord );
+}
+    }
+
+
+
+       
+ 
+
+       
+ 

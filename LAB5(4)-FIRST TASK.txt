@@ -1,0 +1,98 @@
+the class with sepreate file >>>
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.firstproject;
+
+/**
+ *
+ * @author majeb
+ */
+public class CalcRectangle 
+{
+    public double width;
+    public double height;
+    
+    
+    //first we must to set the width variable >>> w 
+    public double getWidth()
+    {
+        return width;
+    }
+    
+    public void setWidth(double w)
+    {
+        this.width=w;
+    }
+    
+    
+    
+     //second we must to set the heigth variable >>> h 
+      public double getheight()
+    {
+        return height;
+    }
+    
+    public void setheight(double h)
+    {
+        this.height=h;
+    }
+    
+    
+    //third we calc our rectangle
+    public double getTheRectangleArea ()
+    {
+        return width * height;
+        
+    }
+    
+    //fourth we calc the Perimeter
+   public  double getThePerimeter ()
+    {
+        return width*2+ height*2;
+        
+    }
+
+    
+ }
+    
+
+------------------------------------------------------------------here i want to put the main file that our opertor work-----
+
+
+package com.mycompany.firstproject;
+
+import java.util.Scanner;
+
+public class FirstProject
+{
+   
+  
+   public static void main(String[] args)
+   {
+       Scanner input =new Scanner (System.in);
+       //here we create an object from class data type
+       double wid,hei;
+      
+       System.out.println("please enter the width: ");
+       wid=input.nextDouble();
+       
+       System.out.println("please enter the height: ");
+       hei=input.nextDouble();
+       
+       CalcRectangle firstCalc = new CalcRectangle();
+       firstCalc.setWidth(wid);
+       firstCalc.setheight(hei);
+       System.out.println("the rectangle =  >>>"+firstCalc.getTheRectangleArea());
+       System.out.println("the perimeter =  >>>"+firstCalc.getThePerimeter());
+
+       
+       
+       
+      
+   }
+
+    
+}

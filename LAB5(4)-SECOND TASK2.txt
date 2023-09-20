@@ -1,0 +1,117 @@
+-------------------->class
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.firstproject;
+
+/**
+ *
+ * @author majeb
+ */
+public class Account
+{
+    private int id=0;
+    private double balance=0;
+    private double  annualInterestRate=0;
+    
+    //first we set the id
+     public void setID(int id)
+    {
+        this.id=id;
+    }
+    
+    //then we set the balance 
+      public void setbalance(double balance)
+    {
+        this.balance=balance;
+    }
+    
+    
+       public void setAnnualRate(double annualInterestRate)
+    {
+        this.annualInterestRate=annualInterestRate;
+    }
+    
+    public double getThenewBalance (double balance , double interstRate)
+    {
+
+        return balance +(balance*annualInterestRate);
+        
+    }
+    
+    
+}
+
+
+------------------------>main function for task1 & task2
+
+package com.mycompany.firstproject;
+
+import java.util.Scanner;
+
+public class FirstProject
+{
+   
+  
+   public static void main(String[] args)
+   {
+       Scanner input =new Scanner (System.in);
+       //here we create an object from class data type
+       double wid,hei;
+      
+       System.out.println("please enter the width: ");
+       wid=input.nextDouble();
+       
+       System.out.println("please enter the height: ");
+       hei=input.nextDouble();
+       
+       CalcRectangle firstCalc = new CalcRectangle();
+       
+       firstCalc.setWidth(wid);
+       firstCalc.setheight(hei);
+       System.out.println("the rectangle =  >>>"+firstCalc.getTheRectangleArea());
+       System.out.println("the perimeter =  >>>"+firstCalc.getThePerimeter());
+       
+       System.out.println("--------------finish the task1 and here we strat task2--------------");
+       
+       
+       //////////////////////////////////////tsk2
+       int id;
+       double balance , intersetRate;
+       Account secondCalc = new Account(); //we declare a variable from datat type class 
+       
+       //first we take the our balance & interset rate & id
+       //we take an id then i assign into the method in class
+       System.out.println("enter your id? ");
+       id=input.nextInt();
+       secondCalc.setID(id);
+       
+       //we take an balance then i assign into the method in class
+       System.out.println("enter your balance? : ");
+       balance=input.nextDouble();
+       secondCalc.setbalance(balance);
+       
+       //we take an interset rate then i assign into the method in class
+       System.out.println("enter you interest rate? ");
+       intersetRate=input.nextDouble();
+       secondCalc.setAnnualRate(intersetRate);
+       
+//       System.out.println("the balance before calc the annual interest rate is >>" + secondCalc.setbalance(balance));
+       System.out.println("the total balance after calc the annual interset rate is "+secondCalc.getThenewBalance(balance,intersetRate));
+       
+       
+       
+       
+       
+       
+       
+
+       
+       
+       
+      
+   }
+
+    
+}

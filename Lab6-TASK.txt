@@ -1,0 +1,86 @@
+//-------------------the main code --------------------
+
+package com.mycompany.firstproject;
+
+import java.util.Scanner;
+
+public class FirstProject
+{
+   
+  
+   public static void main(String[] args)
+   {
+       Ordere task1=new Ordere();
+       Scanner input =new Scanner (System.in);
+       //here we create an object from class data type
+       String name1 , name2;
+       double balance1,balance2;
+      
+       System.out.println("please enter the first product: ");
+       name1=input.next();
+       
+       System.out.println("please enter the second product: ");
+       name2=input.next();
+       task1.setNameOfProduct(name1,name2);
+       ////////////////////////////////////////////////////////////////////
+       System.out.println("please enter the first price of product: ");
+       balance1=input.nextDouble();
+       
+       System.out.println("please enter the second price of product: ");
+       balance2=input.nextDouble();
+       task1.setPriceOfproduct(balance1,balance2);
+       
+       
+       System.out.println("the first order is >>>"+task1.nameOfProduct1+",and its price :"+task1.priceOfnumber1);
+       System.out.println("the second order is >>>"+task1.nameOfProduct2+",and its price :"+task1.priceOfnumber2);
+       
+       double sumOfpriceOrder = task1.priceOfnumber1+task1.priceOfnumber2;
+        System.out.println("Number of order: 2 " + ",and the bill will be :" +sumOfpriceOrder );
+     
+   }
+
+    
+}
+
+
+//--------------------------the sepreate file of our class i made it ----------------
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.firstproject;
+
+/**
+ *
+ * @author majeb
+ */
+public class Ordere 
+{
+    String nameOfProduct1;
+    String nameOfProduct2;
+    
+    double priceOfnumber1;
+    double priceOfnumber2;
+    
+     //first we set the id
+     public void setNameOfProduct(String nameOfProduct1, String nameOfProduct2 )
+    {
+        this.nameOfProduct1=nameOfProduct1;
+        this.nameOfProduct2=nameOfProduct2;
+    }
+    
+    //then we set the balance 
+      public void setPriceOfproduct(double priceOfnumber1 ,double priceOfnumber2 )
+    {
+        this.priceOfnumber1=priceOfnumber1;
+        this.priceOfnumber2=priceOfnumber2;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+}

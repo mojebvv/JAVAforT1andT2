@@ -51,77 +51,125 @@
 
 
 //task2
+
 package com.mycompany.firstproject;
 
-
 import java.util.Scanner;
+
 public class FirstProject
 {
+   
+  
    public static void main(String[] args)
    {
-       Scanner PersongInfo = new Scanner(System.in);
-//       String fn , mn , ln;
-//       int MidC;
-//       string  Firstc  , Lastc;
-//       String Password;
-//       int age;
-String firstName, middleName, lastName ;
-int age;
-//string Pasword;
-       System.out.println("Please enter the first name");
-       firstName=PersongInfo.next();
+       Scanner input = new Scanner (System.in);
+       int age;
+       String firstNAme , secondName , lastName;
+       String Password;
        
-       System.out.println("Please enter the second name");
-       middleName=PersongInfo.next();
+       System.out.println("please enter the fn");
+       firstNAme=input.next();
        
+        System.out.println("please enter the sn");
+       secondName=input.next();
        
-       System.out.println("Please enter the last name");
-       lastName=PersongInfo.next();
+        System.out.println("please enter the ln");
+       lastName=input.next();
        
-       System.out.println("Please enter the age of persong ");
-       age=PersongInfo.nextInt();
-        
-//الكود الي هنا ماشتغل
-//      String  Firstc== fn.charAt(0);
-//      int Midc= mn.length()/2;
-//       String gainResult = to_string(Midc);
-//      String Lastc=ln.charAt(ln.length()-1);
-//       String Fisrtc;
-//       
-//       
-//       
-//       Pasword=Fisrtc+gainResult.substring(gainResult,gainResult+1) +Lastc+ (age*100);
-//       System.out.println("the pass is" + Pasword);
-
-
-
-
-            int midOfMidName=(middleName.length())/2;
-            String CreateAname;
-                   CreateAname = firstName.charAt(0) +
-               middleName.substring(midOfMidName,midOfMidName+1) +
-               lastName.charAt(lastName.length()-1);
-
-
-
- String Pasword= CreateAname + (age*100);
-                 System.out.println("the pass is   :" + Pasword);
-
+       System.out.println("please enter the age");
+       age=input.nextInt();
+       
+      Password=firstNAme.charAt(0)+ secondName.substring(secondName.length()/2, secondName.length()/2+1)
+      +  lastName.charAt(lastName.length()-1)+age*100;
+      
+      
+        Password=Password.toUpperCase();
+       System.out.println("Password "+Password);
        
        
        
        
-    }
+       
+      
+       
+      
+   }
 
     
-    }
-
-
-
-
+}
 
 
 //task3//not solive yet
+
+package com.mycompany.firstproject;
+
+import java.util.Scanner;
+
+public class FirstProject
+{
+   
+  
+   public static void main(String[] args)
+   {
+       Scanner input = new Scanner (System.in);
+       String word;
+       String newWord=" ";
+       
+       System.out.println("enter the word ? "); word=input.nextLine();
+       //why nextLine?????like getline
+       
+       int counter=0;
+       int numberOFoccurnceletter;
+       System.out.println("enter how many letter you want to delet it");
+       numberOFoccurnceletter=input.nextInt();
+       
+       
+       char letter;
+       System.out.println("please enter the letter you want to delet it! ");
+       letter=input.next().charAt(1);
+       
+       for (int i=0 ;i <=word.length();i++)
+       {
+           if((counter<numberOFoccurnceletter)) //هنا شرط تحديد اول كم تبيني احذف
+           {
+               if(word.charAt(i)==letter  )//هنا شرط لو شاف الحرف الي محددة يسويلة سكب
+               {
+                   counter++;
+                   continue;
+                   
+               }
+               
+           }
+           
+           
+           newWord=newWord+word.charAt(i);
+        }
+       
+       System.out.println("the word after delet the our letter is "+ newWord);
+       
+       
+       }
+  
+       
+       
+       
+       
+       
+      
+       
+      
+   }
+
+    
+
+
+
+
+
+
+
+
+
        
         
 
@@ -148,8 +196,9 @@ String TheWord;
 Scanner input = new Scanner(System.in);
 System.out.print("Please enter the string to count the word of it!!! :");
 TheWord = input.nextLine();
-TheWord=TheWord.trim(); //لحذف المسافة من البداية والنهاية
-if (TheWord.length()==0) //?
+
+TheWord=TheWord.trim(); //لحذف المسافة من البداية والنهاية عشان ماتنحسب المسافة الي بالبداية والنهاية على انها كلمة
+if (TheWord.length()==0) //? الفايدة منها انه يشيك لو كان مايوجد كلمة يوقف البرنامج
 {
     CountWord=0;
     
@@ -159,7 +208,7 @@ if (TheWord.length()==0) //?
 
 for (int i=0 ; i<TheWord.length();i++)
 {
-    if (TheWord.charAt(i)==' ')
+    if (TheWord.charAt(i)==' ') //why this??? هنا قاعد اساوية بمسافة ليش؟ لان المسافة دلالة على الانتهاء من كلمة معينه حتى يصل للناهية
     {
     CountWord++;
     }

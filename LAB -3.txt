@@ -1,0 +1,308 @@
+
+package com.mycompany.firstproject;
+import java.util.Scanner;
+
+public class FirstProject
+{
+    
+   //first we need to read our information of rainfall
+    public static void  RaedOutInfoAndMakeThe ()
+    {
+        int RainInfo[][]=new int [4][7];
+        Scanner informationOfrainFall = new Scanner (System.in);
+        for(int row=0 ; row<4;row++)
+        {System.out.print("week " + (row+1) + " " + "\nand the day is ");
+            for(int col=0;col<7;col++)
+            {
+               
+               System.out.println("day " + col + " :");
+                RainInfo[row][col]=informationOfrainFall.nextInt();
+   
+                
+            }
+        }
+        
+       
+        double avg;
+        for(int row=0 ; row<=4;row++)
+        {
+             int sum=0;
+         System.out.print("week " + row + " " + "and the day is ");
+
+            for(int col=0;col<7;col++)
+            {
+                sum+=RainInfo[row][col]; 
+            }
+           avg=sum/7;
+           PrintRsultAfterCheckAvg(avg);
+    }
+        
+        
+    }
+    
+
+     public static void PrintRsultAfterCheckAvg (double avg)
+    {
+       
+       
+                if(avg>=6)
+                    System.out.println("High! ");
+                
+                else if(avg<6 && avg>3)
+                    System.out.println("medum! ");
+                
+                else
+                    System.out.println("Low!");
+            
+        }
+       
+        
+    
+    
+   public static void main(String[] args)
+   {
+       
+       RaedOutInfoAndMakeThe();
+      
+     
+      
+   }
+
+    
+}
+
+
+//task4//system status
+package com.mycompany.firstproject;
+
+import java.util.Scanner;
+enum statusMAchine {ON , OFF, START, INpROGRESS , DONE};
+
+
+public class FirstProject
+{
+    
+    //first >> read a number from a user
+    public static int  ReadNumber (int number)
+    {
+        Scanner input = new Scanner (System.in);
+        System.out.println("please enter the number ? ");
+        number = input .nextInt();
+        return number;
+    }
+    
+    public static statusMAchine  ReturnResult (int number)
+    {
+        if (number == 1 )
+            return statusMAchine.ON;
+        
+        else if (number == 2 )
+            return statusMAchine.OFF ;
+        
+        
+         else if (number == 3 )
+            return statusMAchine.START ;
+        
+        
+         else if (number == 4 )
+            return statusMAchine.INpROGRESS;
+        
+           else if (number == 5 )
+            return statusMAchine.DONE;
+           else
+        return null;
+        
+    }
+    
+    
+        public static void  PrintResult (statusMAchine Result , int number)
+    {
+        if (ReturnResult(number)== statusMAchine.OFF )
+            System.out.println("its off");
+        
+        else if (ReturnResult(number)== statusMAchine.ON )
+            System.out.println("its on");
+        
+        else if (ReturnResult(number)== statusMAchine.START )
+            System.out.println("its start");
+        
+        else if (ReturnResult(number)== statusMAchine.INpROGRESS )
+            System.out.println("its its progress");
+        
+        
+        else if (ReturnResult(number)== statusMAchine.DONE )
+            System.out.println("its done");
+        
+        else if (ReturnResult(number)== null )
+            System.out.println("its not there");
+       
+        
+    }
+    
+         
+
+ 
+   public static void main(String[] args)
+   {
+       int number1 = 0;
+       statusMAchine status = null;
+      
+       PrintResult(status, ReadNumber(number1));
+       
+       
+      
+   }
+
+    
+}
+
+
+
+
+
+
+
+
+
+//task3
+package com.mycompany.firstproject;
+
+import java.util.Scanner;
+
+public class FirstProject
+{
+    public static void letterDelet (String word, char letterDelet)
+    {
+    String newWordAfterDelet = "";
+    for ( int i = 0 ; i< word.length() ; i++ )
+    if ( message.charAt(i)!=letterDelet)
+    newWordAfterDelet += word.charAt(i);
+        System.out.println("after delet is >" + newWordAfterDelet);
+    }
+
+    
+  
+         
+
+ 
+   public static void main(String[] args)
+   {
+       String word;
+       char letter;
+         Scanner input= new Scanner (System.in);
+      System.out.println("Type in a string:");
+      word = input.nextLine();
+      System.out.println("Enter a letter to delete:");
+      letter = input.nextLine().charAt(0);
+      letterDelet( word , letter );
+       
+       
+      
+   }
+
+    
+}
+
+
+
+//task2//
+package com.mycompany.firstproject;
+
+
+import java.util.Scanner;
+
+public class Firstproject 
+   {
+    
+//first we need to input the our pass
+Srring inputPassword (Srring  password)
+{
+
+    System.out.println("please enter the password ");
+    password=input.next();
+    return password;
+      
+}
+    
+    //first check
+boolean firstCheck (String password) 
+{
+    return password.length()<=8;
+   
+}
+
+boolean secondCheck (String password) 
+{
+    for (int i=0; i<password.length();i++)
+    {
+        if(Character.isLetter(password.charAt(i)) && Character.isDigit(password.charAt(i)))
+            return true ;
+        else
+            return false;
+    }
+    return false;
+       
+}
+
+
+boolean thirdCheck (String password) 
+{
+    int counter=0;
+    for (int i=0; i<password.length();i++)
+    {
+        if(Character.isDigit(password.charAt(i))){
+            counter++;
+        return true;
+        }
+    }
+    
+    if(counter<=2)
+        return false;
+    return false;
+    
+}
+
+String fullCheck (String password) 
+{
+   if(firstCheck(password)==true && secondCheck(password)==true &thirdCheck(password)==true)
+       return "valid password ";
+   
+   else
+       return "unvalid password";
+    
+}
+
+    
+public static void main(String[] args) 
+{
+    String Password = "" ;
+    String passs;
+     Scanner input = new Scanner (System.in);
+     passs=inputPassword(Password);
+     fullCheck(passs);
+     
+
+   
+    
+    
+    
+    
+
+}
+    }
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+

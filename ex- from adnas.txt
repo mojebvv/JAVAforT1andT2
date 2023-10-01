@@ -1,0 +1,161 @@
+//first>>>>>> def of file class
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.firstproject;
+
+/**
+ *
+ * @author majeb
+ */
+public class BankAccount 
+{
+    public String firstName;
+    public String secondname;
+    public String lastName;
+    
+    public void getNameinfo(String firstName , String secondname ,String lastName  )
+    {
+        this.firstName=firstName;
+        this.secondname=secondname;
+        this.lastName=lastName;
+    }
+    ////////////////////////////////////////////
+    
+    public int accountNumber;
+    public void getAcoountNumber(int accountNumber)
+    {
+        this.accountNumber=accountNumber;
+    }
+    /////////////////////////////////////
+    
+    public double amount;
+    public void getAmmount(double amount)
+    {
+        this.amount=amount;
+    }
+    
+    
+    
+    
+    
+    /////////////we finished from print all information of the owner of the account//////
+    ////////////he we want to start to begam with operation in the account//////////////
+    public void ammountDeposit(double depositcash)
+    {
+        this.amount=this.amount+depositcash;
+         System.out.println("here we deposit  to the account: " +depositcash+ "and the balance is: "+amount );
+
+    }
+    
+     public void ammountDraw(double drawcash)
+    {
+        if (amount<drawcash)
+        {
+            System.out.println("sorry the balance not allowed");
+        }
+        else 
+        {
+        this.amount=this.amount-drawcash;
+        System.out.println("here we draw from the account: " +drawcash+ "and the balance is: "+amount );
+        }
+    }
+     
+     
+      public void ammountaftermakeanyoperation()
+    {
+        System.out.println("the balance after make an operation :"+this.amount);
+    }
+      
+      public void personAccountInfo(int accountNumber,String firstName , String secondname ,String lastName,double amount )
+            
+    {
+        System.out.println("the id account is: "+ accountNumber);
+        System.out.println("the information of the owner account \n"+ "fuull name of the owner : "
+                +firstName + secondname + lastName );
+        System.out.println("the amount in his account is "+this.amount);
+    }
+
+//    @Override
+//    public String toString() {
+//        return "BankAccount{" + "firstName=" + firstName + ", secondname=" + secondname + ", lastName=" + lastName + ", accountNumber=" + accountNumber + ", amount=" + this.amount + '}';
+//    }
+      
+    
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+//////////////////second >>>> file of main function'
+package com.mycompany.firstproject;
+import java.util.Scanner;
+
+public class FirstProject
+{
+    
+   public static void main(String[] args)
+   {
+       Scanner input = new Scanner (System.in);
+       BankAccount firstAccount = new BankAccount() ;
+       
+       //1-
+       String f1 , f2 , f3;
+       System.out.println("please enter a full name of the owner of the first account ");
+       f1=input.next();
+       f2=input.next();
+       f3=input.next();
+       firstAccount.getNameinfo(f1, f2, f3);
+       
+       //2-
+       int id;
+       System.out.println("please entert the id of your account ");
+       id=input.nextInt();
+       firstAccount.getAcoountNumber(id);
+       
+       //3
+       int ammount;
+       System.out.println("please enter the amount of your account");
+       ammount=input.nextInt();
+       firstAccount.getAmmount(ammount);
+       
+       //4
+       int depositAmmount;
+       System.out.println("please enter the ammount you want to deposit on your account");
+       depositAmmount=input.nextInt();
+       firstAccount.ammountDeposit(depositAmmount);
+       
+       //5
+       firstAccount.ammountaftermakeanyoperation();
+       
+       //6
+       System.out.println("\the information of the owner \n");
+       firstAccount.personAccountInfo(id, f1, f2, f3, ammount);
+       
+       
+       
+      
+      
+     
+      
+   }
+
+    
+}
